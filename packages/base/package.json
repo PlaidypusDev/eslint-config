@@ -33,7 +33,7 @@
     "prettier": ">= 2"
   },
   "devDependencies": {
-    "@plaidypus-dev/eslint-utils": "*"
+    "@plaidypus-dev/eslint-utils": "^0.1.0"
   },
   "publishConfig": {
     "access": "public"
