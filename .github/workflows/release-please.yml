@@ -24,7 +24,8 @@ jobs:
           path: packages
           monorepo-tags: true
 
-      - uses: ./.github/workflows/deploy-latest-packages.yml
+      - name: Deploy all packages
+        uses: ./deploy-latest-packages.yml
         with:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         if: ${{ steps.release.outputs.release_created }}

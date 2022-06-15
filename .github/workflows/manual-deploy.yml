@@ -12,6 +12,7 @@ jobs:
         with:
           fetch-depth: "0"
 
-      - uses: ./.github/workflows/deploy-latest-packages.yml
+      - name: Deploy all packages
+        uses: ./deploy-latest-packages.yml
         with:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
