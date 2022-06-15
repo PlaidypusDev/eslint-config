@@ -13,6 +13,6 @@ jobs:
           fetch-depth: "0"
 
       - name: Deploy all packages
-        uses: ./deploy-latest-packages.yml
+        uses: plaidypus-dev/eslint-config/.github/workflows/deploy-latest-package.yml@main
         with:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
