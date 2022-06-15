@@ -1,6 +1,6 @@
 {
   "name": "@plaidypus-dev/eslint-config-base",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The base eslint config for Plaidypus",
   "author": "David Shefcik <dshefcik@plaidypus.com>",
   "homepage": "https://github.com/PlaidypusDev/eslint-config#readme",
@@ -20,7 +20,6 @@
     "url": "https://github.com/PlaidypusDev/eslint-config/issues"
   },
   "dependencies": {
-    "@plaidypus-dev/eslint-config-react": "^0.1.0",
     "@typescript-eslint/parser": "^5.28.0",
     "eslint-config-prettier": "^8.5.0"
   },

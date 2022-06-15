@@ -1,6 +1,6 @@
 {
   "name": "@plaidypus-dev/eslint-config-react-native",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "The React Native eslint config for Plaidypus",
   "keywords": [],
   "author": "David Shefcik <dshefcik@plaidypus.com>",
@@ -21,8 +21,6 @@
   },
   "homepage": "https://github.com/PlaidypusDev/eslint-config#readme",
   "dependencies": {
-    "@plaidypus-dev/eslint-config-react": "^0.1.0",
-    "@plaidypus-dev/eslint-utils": "^0.1.0",
     "@typescript-eslint/parser": "^5.28.0",
     "eslint-config-prettier": "^8.5.0"
   },
