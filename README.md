@@ -1,8 +1,12 @@
 # Plaidypus Eslint Config
 
-Why is this using lerna?
+# About [Lerna](https://lerna.js.org/)
 
-- Don't have to publish packages to repo when another local package consumes it. Makes development and publishing easy
+### Why?
+
+Lerna makes it easy to manage a repository that contains multiple npm packages that depend on each other. It has built in tools for development and makes deploying all the packages at once super easy.
+
+# Packages
 
 ## @plaidypus-dev/eslint-config-base
 
