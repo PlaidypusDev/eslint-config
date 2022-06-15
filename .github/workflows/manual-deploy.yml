@@ -4,6 +4,6 @@ on: workflow_dispatch
 
 jobs:
   manually-deploy-all-packages:
-    uses: plaidypus-dev/eslint-config/.github/workflows/deploy-latest-package.yml@master
+    uses: PlaidypusDev/eslint-config/.github/workflows/deploy-latest-package.yml@master
     secrets:
       NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
