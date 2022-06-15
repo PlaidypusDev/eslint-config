@@ -4,15 +4,6 @@ on: workflow_dispatch
 
 jobs:
   manually-deploy-all-packages:
-    runs-on: ubuntu-latest
-
-    name: Manually Deploy All Packages
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: "0"
-
-      - name: Deploy all packages
-        uses: plaidypus-dev/eslint-config/.github/workflows/deploy-latest-package.yml@main
-        with:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    uses: plaidypus-dev/eslint-config/.github/workflows/deploy-latest-package.yml@main
+    secrets:
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
