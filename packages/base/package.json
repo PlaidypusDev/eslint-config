@@ -1,0 +1,41 @@
+{
+  "name": "@plaidypus-dev/eslint-config-base",
+  "version": "0.1.0",
+  "description": "The base eslint config for Plaidypus",
+  "author": "David Shefcik <dshefcik@plaidypus.com>",
+  "homepage": "https://github.com/PlaidypusDev/eslint-config#readme",
+  "license": "ISC",
+  "main": "src/index.js",
+  "directories": {
+    "src": "src"
+  },
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PlaidypusDev/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PlaidypusDev/eslint-config/issues"
+  },
+  "dependencies": {
+    "@plaidypus-dev/eslint-config-react": "^0.1.0",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint-config-prettier": "^8.5.0"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "eslint": ">= 8",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "prettier": ">= 2"
+  },
+  "devDependencies": {
+    "@plaidypus-dev/eslint-utils": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
