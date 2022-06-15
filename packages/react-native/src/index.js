@@ -1,12 +1,13 @@
-const { mergeConfigs } = require("@plaidypus-dev/eslint-utils");
 const reactConfig = require("@plaidypus-dev/eslint-config-react");
 
 const reactNativeConfig = {
-  plugins: ["react-native"],
+  ...reactConfig,
+  plugins: [...reactConfig.plugins, "react-native"],
   env: {
     "react-native/react-native": true,
   },
   rules: {
+    ...reactConfig.rules,
     "react-native/no-unused-styles": "warn",
     "react-native/split-platform-components": "off",
     "react-native/no-inline-styles": "warn",
@@ -16,6 +17,4 @@ const reactNativeConfig = {
   },
 };
 
-const combinedConfigs = mergeConfigs(reactConfig, reactNativeConfig);
-
-module.exports = combinedConfigs;
+module.exports = reactNativeConfig;
