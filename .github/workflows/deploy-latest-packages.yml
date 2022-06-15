@@ -1,8 +1,13 @@
 name: Deploy latest packages to npm
 
-on: [workflow_dispatch]
+on:
+  workflow_call:
+    secrets:
+      NPM_TOKEN:
+        required: true
 
-  deploy-react-config:
+jobs:
+  deploy-latest-packages:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -24,7 +29,9 @@ on: [workflow_dispatch]
         run: npm whoami
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: |
+          yarn install --frozen-lockfile
+          npx lerna bootstrap --no-ci
 
       - name: Deploy packages
-        run: npx lerna publish from-git --yes
+        run: npx lerna publish from-package --no-push --no-private --no-git-tag-version --no-verify-access --yes

@@ -1,0 +1,13 @@
+name: Manually Deploy All Packages
+
+on: [workflow_dispatch]
+
+jobs:
+  manually-deploy-all-packages:
+    runs-on: ubuntu-latest
+
+    name: Manually Deploy All Packages
+    steps:
+      - uses: ./.github/workflows/deploy-latest-packages.yml
+        with:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
