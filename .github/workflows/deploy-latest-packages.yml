@@ -1,10 +1,6 @@
 name: Deploy latest packages to npm
 
-on:
-  workflow_call:
-    secrets:
-      NPM_TOKEN:
-        required: true
+on: [workflow_dispatch]
 
 jobs:
   deploy-latest-packages:

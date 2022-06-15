@@ -1,9 +1,0 @@
-name: Manually Deploy All Packages
-
-on: workflow_dispatch
-
-jobs:
-  manually-deploy-all-packages:
-    uses: PlaidypusDev/eslint-config/.github/workflows/deploy-latest-package.yml@master
-    secrets:
-      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
