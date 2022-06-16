@@ -6,7 +6,7 @@ jobs:
   deploy-latest-packages:
     runs-on: ubuntu-latest
     env:
-      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     name: Deploy latest packages to NPM
     steps:
