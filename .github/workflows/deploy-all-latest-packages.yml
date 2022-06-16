@@ -13,8 +13,6 @@ jobs:
     name: Deploy latest packages to NPM
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: "0"
 
       - name: Use Node.js 14
         uses: actions/setup-node@v1
