@@ -11,10 +11,8 @@ on:
 jobs:
   react-release-please:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+    env:
+      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     steps:
       - uses: GoogleCloudPlatform/release-please-action@v3.2.2
