@@ -39,7 +39,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14
-          registry-url: "https://registry.npmjs.org"
+          registry-url: https://registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
         if: ${{ steps.release.outputs.release_created }}
 
       - name: Check if able to publish changes

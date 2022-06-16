@@ -11,8 +11,6 @@ on:
 jobs:
   base-release-please:
     runs-on: ubuntu-latest
-    env:
-      NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     steps:
       - uses: GoogleCloudPlatform/release-please-action@v3.2.2
@@ -39,7 +37,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14
-          registry-url: "https://registry.npmjs.org"
+          registry-url: https://registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}
         if: ${{ steps.release.outputs.release_created }}
 
       - name: Check if able to publish changes
