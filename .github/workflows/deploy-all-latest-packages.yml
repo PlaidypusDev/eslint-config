@@ -14,11 +14,11 @@ jobs:
         uses: actions/setup-node@v3.3.0
         with:
           node-version: 14
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Check if able to publish changes
         run: npm whoami
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Install dependencies
         run: |
@@ -27,5 +27,3 @@ jobs:
 
       - name: Deploy packages
         run: npx lerna publish from-package --no-push --no-private --no-git-tag-version --no-verify-access --yes
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
