@@ -19,6 +19,56 @@ const baseConfig = {
     "import/no-useless-path-segments": "warn",
     "import/first": "error",
     "import/no-duplicates": "warn",
+    // Naming conventions
+    "@typescript-eslint/naming-convention": [
+      "error",
+      // camelCase
+      {
+        selector: [
+          "variableLike",
+          "property",
+          "method",
+          "parameterProperty",
+          "accessor",
+        ],
+        format: ["strictCamelCase"],
+      },
+      // PascalCase
+      {
+        selector: ["typeLike"],
+        format: ["StrictPascalCase"],
+      },
+      // Allow PascalCase for react component functions
+      // TODO: move this into the react package
+      {
+        selector: ["function"],
+        format: ["strictCamelCase", "StrictPascalCase"],
+      },
+      // UPPER_CASE
+      {
+        selector: ["enumMember"],
+        format: ["UPPER_CASE"],
+      },
+      {
+        selector: ["variable"],
+        modifiers: ["const"],
+        format: ["strictCamelCase", "UPPER_CASE"],
+      },
+      // prefixes
+      {
+        selector: ["variable"],
+        types: ["boolean"],
+        // The prefix is trimmed before format is validated, therefore PascalCase
+        // must be used to allow variables such as isEnabled using the prefix is.
+        format: ["StrictPascalCase"],
+        prefix: ["is", "should", "has", "can", "did", "will"],
+      },
+      {
+        selector: ["typeParameter"],
+        prefix: ["T"],
+        format: null,
+      },
+    ],
     // TODO: Import ordering
   },
 };
