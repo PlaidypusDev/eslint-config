@@ -1,9 +1,13 @@
-const { mergeConfigs } = require("@plaidypus-dev/eslint-utils");
 const baseConfig = require("@plaidypus-dev/eslint-config-base");
 
 const reactConfig = {
-  extends: ["plugin:react/recommended", "plugin:react-hooks/recommended"],
-  plugins: ["react"],
+  ...baseConfig,
+  extends: [
+    ...baseConfig.extends,
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+  ],
+  plugins: [...baseConfig.plugins, "react"],
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: "module",
@@ -17,6 +21,7 @@ const reactConfig = {
     },
   },
   rules: {
+    ...baseConfig.rules,
     "react/boolean-prop-naming": [
       "error",
       {
@@ -40,6 +45,4 @@ const reactConfig = {
   },
 };
 
-const combinedConfigs = mergeConfigs(baseConfig, reactConfig);
-
-module.exports = combinedConfigs;
+module.exports = reactConfig;

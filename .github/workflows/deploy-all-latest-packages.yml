@@ -2,29 +2,28 @@ name: Deploy latest packages to npm
 
 on: [workflow_dispatch]
 
-  deploy-react-config:
+jobs:
+  deploy-latest-packages:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
     name: Deploy latest packages to NPM
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-depth: "0"
 
       - name: Use Node.js 14
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3.3.0
         with:
           node-version: 14
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Check if able to publish changes
         run: npm whoami
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: |
+          yarn install --frozen-lockfile
+          npx lerna bootstrap --no-ci
 
       - name: Deploy packages
-        run: npx lerna publish from-git --yes
+        run: npx lerna publish from-package --no-push --no-private --no-git-tag-version --no-verify-access --yes

@@ -1,0 +1,66 @@
+name: Base Release Please
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "packages/base/**"
+
+jobs:
+  base-release-please:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: GoogleCloudPlatform/release-please-action@v3.2.2
+        id: release
+        with:
+          release-type: node
+          package-name: "@plaidypus-dev/eslint-config-base"
+          path: packages/base
+          monorepo-tags: true
+
+      - uses: actions/checkout@v2
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Start deployment
+        uses: bobheadxi/deployments@v0.4.3
+        id: deployment
+        with:
+          step: start
+          token: ${{ secrets.GITHUB_TOKEN }}
+          env: eslint-config-base
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Use Node.js 14
+        uses: actions/setup-node@v3.3.0
+        with:
+          node-version: 14
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Check if able to publish changes
+        run: npm whoami
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Install dependencies
+        run: |
+          yarn install --frozen-lockfile
+          npx lerna bootstrap --no-ci
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Deploy base package
+        run: npx lerna publish from-package --no-push --no-private --no-git-tag-version --no-verify-access --yes
+        if: ${{ steps.release.outputs.release_created }}
+
+      - name: Update deployment status
+        uses: bobheadxi/deployments@v0.4.3
+        if: ${{ always() && steps.release.outputs.release_created }}
+        with:
+          step: finish
+          token: ${{ secrets.GITHUB_TOKEN }}
+          status: ${{ job.status }}
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+          env_url: https://www.npmjs.com/package/@plaidypus-dev/eslint-config-base

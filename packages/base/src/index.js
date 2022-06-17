@@ -1,4 +1,4 @@
-module.exports = {
+const baseConfig = {
   extends: [
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
@@ -72,3 +72,5 @@ module.exports = {
     // TODO: Import ordering
   },
 };
+
+module.exports = baseConfig;
