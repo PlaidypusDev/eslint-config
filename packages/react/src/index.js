@@ -25,9 +25,9 @@ const reactConfig = {
     "react/boolean-prop-naming": [
       "error",
       {
-        rule: "^(is|has)[A-Z]([A-Za-z0-9]?)+",
+        rule: "^(is|has|should|can|did|will)[A-Z]([A-Za-z0-9]?)+",
         message:
-          "It is better if your prop ({{ propName }}) starts with `is` or `has`",
+          "It is better if your prop ({{ propName }}) starts with `is`, `has`, `should`, `can`, `did`, or `will`",
       },
     ],
     "react/function-component-definition": [
