@@ -33,6 +33,15 @@ const baseConfig = {
         ],
         format: ["strictCamelCase"],
       },
+      // Allow ITestType
+      {
+        "selector": ["typeLike"],
+        "format": ["PascalCase"],
+        "filter": {
+          "regex": "^I[A-Z]",
+          "match": true
+        }
+      },
       // PascalCase
       {
         selector: ["typeLike"],
@@ -48,6 +57,16 @@ const baseConfig = {
       {
         selector: ["enumMember"],
         format: ["UPPER_CASE"],
+      },
+      // Allow StackNavigator, TestContext, etc. as PascalCase
+      {
+        "selector": ["variable"],
+        "modifiers": ["const"],
+        "format": ["StrictPascalCase"],
+        "filter": {
+          "regex": "(.*)(Navigator|Context|Screen(s?))",
+          "match": true
+        }
       },
       {
         selector: ["variable"],
