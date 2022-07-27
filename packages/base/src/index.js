@@ -47,6 +47,14 @@ const baseConfig = {
         selector: ["typeLike"],
         format: ["StrictPascalCase"],
       },
+      {
+        "selector": ["property"],
+        "format": ["StrictPascalCase"],
+        "filter": {
+          "regex": "^(.*)(Screen(s?))$",
+          "match": true
+        }
+      },
       // Allow PascalCase for react component functions
       // TODO: move this into the react package
       {

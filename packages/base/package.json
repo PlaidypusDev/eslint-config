@@ -1,6 +1,6 @@
 {
   "name": "@plaidypus-dev/eslint-config-base",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "The base eslint config for Plaidypus",
   "author": "David Shefcik <dshefcik@plaidypus.com>",
   "homepage": "https://github.com/PlaidypusDev/eslint-config#readme",
