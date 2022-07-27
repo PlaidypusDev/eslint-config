@@ -64,7 +64,7 @@ const baseConfig = {
         "modifiers": ["const"],
         "format": ["StrictPascalCase"],
         "filter": {
-          "regex": "^((?!use).)*(Navigator|Context|Screen(s?))$",
+          "regex": "^[^use](.*)(Navigator|Context|Screen(s?))$",
           "match": true
         }
       },
