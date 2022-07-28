@@ -66,16 +66,6 @@ const baseConfig = {
         selector: ["enumMember"],
         format: ["UPPER_CASE"],
       },
-      // Allow StackNavigator, TestContext, etc. as PascalCase
-      {
-        "selector": ["variable"],
-        "modifiers": ["const"],
-        "format": ["StrictPascalCase"],
-        "filter": {
-          "regex": "^[^use](.*)(Navigator|Context|Screen(s?))$",
-          "match": true
-        }
-      },
       {
         selector: ["variable"],
         modifiers: ["const"],

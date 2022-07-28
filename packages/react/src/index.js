@@ -42,6 +42,24 @@ const reactConfig = {
     "react/jsx-boolean-value": "warn",
     "react/jsx-pascal-case": "error",
     "react/react-in-jsx-scope": "off",
+    // PascalCase for naming React specific constants
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": ["variable"],
+        "modifiers": ["const"],
+        "format": ["StrictPascalCase"],
+        "filter": {
+          "regex": "^[^use](.*)(Navigator|Context|Screen(s?))$",
+          "match": true
+        }
+      },
+      {
+        selector: ["variable"],
+        modifiers: ["const"],
+        format: ["strictCamelCase", "UPPER_CASE"],
+      },
+    ]
   },
 };
 
