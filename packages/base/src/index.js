@@ -93,6 +93,8 @@ const baseConfig = {
       {
         replacements: {
           props: false,
+          args: false,
+          params: false,
         },
       },
     ],
