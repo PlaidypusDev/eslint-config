@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.0.0](https://github.com/PlaidypusDev/eslint-config/compare/eslint-config-react-v1.0.0...eslint-config-react-v2.0.0) (2022-08-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* update base config peer dependency to v2 (#13)
+
+### Features
+
+* move naming rules to react package ([#10](https://github.com/PlaidypusDev/eslint-config/issues/10)) ([abc0475](https://github.com/PlaidypusDev/eslint-config/commit/abc0475443b4e8cacc339bc743e91c4bb3a59dee))
+* update base config peer dependency to v2 ([#13](https://github.com/PlaidypusDev/eslint-config/issues/13)) ([d490797](https://github.com/PlaidypusDev/eslint-config/commit/d490797a70f7c0c42aa68c929c0f828adcf2fd2e))
+
 ## 1.0.0 (2022-07-14)
 
 
