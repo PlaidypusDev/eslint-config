@@ -1,6 +1,8 @@
 const baseConfig = {
   extends: [
     "plugin:@typescript-eslint/recommended",
+    // Order is important here, see https://github.com/prettier/eslint-config-prettier/issues/110
+    "plugin:unicorn/recommended",
     "plugin:prettier/recommended",
   ],
   parser: "@typescript-eslint/parser",
@@ -86,6 +88,26 @@ const baseConfig = {
         format: null,
       },
     ],
+    "unicorn/prevent-abbreviations": [
+      "error",
+      {
+        replacements: {
+          props: false,
+          args: false,
+          params: false,
+        },
+      },
+    ],
+    "unicorn/filename-case": [
+      "error",
+      {
+        cases: {
+          camelCase: true,
+          pascalCase: true,
+        },
+      },
+    ],
+    "unicorn/no-null": "off",
     // TODO: Import ordering
   },
 };
