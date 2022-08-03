@@ -1,5 +1,19 @@
 # Changelog
 
+## [2.0.0](https://github.com/PlaidypusDev/eslint-config/compare/eslint-config-base-v1.0.0...eslint-config-base-v2.0.0) (2022-08-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* add unicorn rules to base eslint config (#11)
+
+### Features
+
+* add extra rules to naming convention ([#5](https://github.com/PlaidypusDev/eslint-config/issues/5)) ([ca51fa2](https://github.com/PlaidypusDev/eslint-config/commit/ca51fa266fc4340a7541911b321683f2b4083caa))
+* add unicorn rules to base eslint config ([#11](https://github.com/PlaidypusDev/eslint-config/issues/11)) ([236b9ea](https://github.com/PlaidypusDev/eslint-config/commit/236b9ea610ff8240d2ae86a07766a273c78242d6))
+* dont match hooks for context naming ([#8](https://github.com/PlaidypusDev/eslint-config/issues/8)) ([26064ae](https://github.com/PlaidypusDev/eslint-config/commit/26064ae1500bdf0fcee015ddddf468252c4629f7))
+* move naming rules to react package ([#10](https://github.com/PlaidypusDev/eslint-config/issues/10)) ([abc0475](https://github.com/PlaidypusDev/eslint-config/commit/abc0475443b4e8cacc339bc743e91c4bb3a59dee))
+
 ## 1.0.0 (2022-06-17)
 
 
