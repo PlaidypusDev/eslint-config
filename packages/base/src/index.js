@@ -101,6 +101,7 @@ const baseConfig = {
           props: false,
           args: false,
           params: false,
+          ref: false
         },
       },
     ],
