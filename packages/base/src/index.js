@@ -35,6 +35,12 @@ const baseConfig = {
         ],
         format: ["strictCamelCase"],
       },
+      {
+        "selector": "memberLike",
+        "modifiers": ["private"],
+        "format": ["camelCase"],
+        "leadingUnderscore": "require"
+      },
       // Allow ITestType
       {
         "selector": ["typeLike"],
