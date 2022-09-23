@@ -22,9 +22,7 @@
   "homepage": "https://github.com/PlaidypusDev/eslint-config#readme",
   "dependencies": {
     "@typescript-eslint/parser": "^5.28.0",
-    "eslint-config-prettier": "^8.5.0"
-  },
-  "peerDependencies": {
+    "eslint-config-prettier": "^8.5.0",
     "@plaidypus-dev/eslint-config-base": "^2.0.0",
     "@plaidypus-dev/eslint-config-react": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
