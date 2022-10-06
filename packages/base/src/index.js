@@ -94,6 +94,9 @@ const baseConfig = {
         format: null,
       },
     ],
+    // Class member accessibility
+    "@typescript-eslint/explicit-member-accessibility": ["error"],
+    // Unicorn
     "unicorn/prevent-abbreviations": [
       "error",
       {
