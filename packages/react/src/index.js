@@ -42,6 +42,8 @@ const reactConfig = {
     "react/jsx-boolean-value": "warn",
     "react/jsx-pascal-case": "error",
     "react/react-in-jsx-scope": "off",
+    // Hooks
+    "react-hooks/exhaustive-deps": "error",
     // PascalCase for naming React specific constants
     "@typescript-eslint/naming-convention": [
       "error",
