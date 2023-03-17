@@ -1,14 +1,16 @@
 # Plaidypus Eslint Config
+This repository is a monorepo containing our custom eslint packages
 
-# About [Lerna](https://lerna.js.org/)
+## Links
+- Base eslint package: https://www.npmjs.com/package/@plaidypus-dev/eslint-config-base
+- React eslint package: https://www.npmjs.com/package/@plaidypus-dev/eslint-config-react
+- React Native eslint package: https://www.npmjs.com/package/@plaidypus-dev/eslint-config-react-native
 
-### Why?
+## Development
+Once you first pull the repository run `yarn` in the root of the project. To install the necessary dependencies and link the local Lerna dependencies you can run `yarn lerna:bootstrap` in the root of the repository.
 
-Lerna makes it easy to manage a repository that contains multiple npm packages that depend on each other. It has built in tools for development and makes deploying all the packages at once super easy.
+When you make changes to an eslint config the other eslint configs that depend on it will automatically use the local version. You can test your changes by using [yarn link](https://classic.yarnpkg.com/lang/en/docs/cli/link/). You can create your own test project to use yarn link on.
 
-# Packages
-
-## @plaidypus-dev/eslint-config-base
 
 ### Installation
 
