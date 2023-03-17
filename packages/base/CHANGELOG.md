@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.1.0](https://github.com/PlaidypusDev/eslint-config/compare/eslint-config-base-v2.0.0...eslint-config-base-v2.1.0) (2022-10-06)
+
+
+### Features
+
+* explicit member accessibility ([#21](https://github.com/PlaidypusDev/eslint-config/issues/21)) ([1609f21](https://github.com/PlaidypusDev/eslint-config/commit/1609f21bea85006b011f89153645c930f8056326))
+* private class members underscore prefix ([#17](https://github.com/PlaidypusDev/eslint-config/issues/17)) ([733f239](https://github.com/PlaidypusDev/eslint-config/commit/733f239915ae44e68e16da62fffc4a102abf1a0d))
+
+
+### Bug Fixes
+
+* allow ref abbreviation ([#19](https://github.com/PlaidypusDev/eslint-config/issues/19)) ([a7bffed](https://github.com/PlaidypusDev/eslint-config/commit/a7bffed524770abb65a9ec626e8f69b95bbcfe89))
+
 ## [2.0.0](https://github.com/PlaidypusDev/eslint-config/compare/eslint-config-base-v1.0.0...eslint-config-base-v2.0.0) (2022-08-03)
 
 
