@@ -1,6 +1,6 @@
 {
   "name": "@plaidypus-dev/eslint-config-react",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "The React eslint config for Plaidypus",
   "keywords": [],
   "author": "David Shefcik <dshefcik@plaidypus.com>",
