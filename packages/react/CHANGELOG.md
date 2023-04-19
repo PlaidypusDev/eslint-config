@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/PlaidypusDev/eslint-config/compare/eslint-config-react-v2.0.0...eslint-config-react-v3.0.0) (2023-04-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* make exhaustive deps an error (#22)
+
+### Features
+
+* make exhaustive deps an error ([#22](https://github.com/PlaidypusDev/eslint-config/issues/22)) ([79f52c9](https://github.com/PlaidypusDev/eslint-config/commit/79f52c922a29a0c9d48bf53a83bbf2f5c03a3a99))
+
 ## [2.0.0](https://github.com/PlaidypusDev/eslint-config/compare/eslint-config-react-v1.0.0...eslint-config-react-v2.0.0) (2022-08-03)
 
 
